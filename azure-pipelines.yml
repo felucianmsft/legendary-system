@@ -26,3 +26,7 @@ steps:
   - task: AdvancedSecurity-Codeql-Analyze@1
   
   - task: AdvancedSecurity-Publish@1 
+
+  - task: MicrosoftSecurityDevOps@1
+    inputs:
+      command: 'run'
