@@ -11,6 +11,8 @@ jobs:
       Wap_Project_Directory: your-wap-project-directory-name    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
       Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
+    environment: Test
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -20,4 +22,8 @@ jobs:
     - name: Script
       run: echo "ciao" 
 
-  
+    - name: Use environment variable  
+      run: echo "Deploying to $ENVIRONMENT_URL"  
+      env:  
+        ENVIRONMENT_URL: ${{ secrets.ENVIRONMENT_URL }} # Access the environment variable  
+    
