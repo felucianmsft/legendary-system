@@ -23,6 +23,13 @@ jobs:
     - name: Run node build process2
       run: echo "${{ env.ENVIRONMENT_NAME }}"
 
+    - name: Run node build process3
+      run: echo '${{ vars.ENVIRONMENT_NAME }}'
+
+    - name: Run node build process24
+      run: echo "${{ vars.ENVIRONMENT_NAME }}"
+
+
     - name: Use environment variable  
       run: echo 'Deploying to ${$ENVIRONMENT_URL}'  
       env:  
