@@ -23,7 +23,7 @@ jobs:
       run: echo "ciao" 
 
     - name: Use environment variable  
-      run: echo "Deploying to $ENVIRONMENT_URL"  
+      run: echo 'Deploying to ${$ENVIRONMENT_URL}'  
       env:  
         ENVIRONMENT_URL: ${{ secrets.ENVIRONMENT_URL }} # Access the environment variable  
     
